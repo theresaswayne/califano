@@ -44,10 +44,13 @@ outputFile = paste(objectName, "_summary.csv") # spaces will be inserted
 write_csv(merged_intens,file.path(parentDir, outputFile))
 
 # ---- Plot ----
-p_mean <- ggplot(objectData, aes(x=Metadata_Well, y=Intensity_MeanIntensity_Green)) + 
+p_mean <- ggplot(objectData,
+                 aes(x=Metadata_Well,
+                     y=Intensity_MeanIntensity_Green)) + 
   geom_violin(trim=FALSE) +
+  facet_wrap(~Metadata_Experiment) +
   stat_summary(fun.data=mean_sdl,
                geom="pointrange", color="red")
 
 outputPlot = paste(objectName, "mean plot.pdf")
-ggsave(file.path(parentDir, outputPlot))
+ggsave(file.path(parentDir, outputPlot), width=10, height = 7)
