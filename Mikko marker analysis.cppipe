@@ -169,7 +169,7 @@ ExportToSpreadsheet:[module_num:9|svn_version:'Unknown'|variable_revision_number
     Press button to select measurements:
     Representation of Nan/Inf:NaN
     Add a prefix to file names?:Yes
-    Filename prefix:2023-05-03-
+    Filename prefix:2024-04-11
     Overwrite existing files without warning?:No
     Data to export:Do not use
     Combine these object measurements with those of the previous object?:No
@@ -227,6 +227,6 @@ SaveImages:[module_num:12|svn_version:'Unknown'|variable_revision_number:16|show
     When to save:Every cycle
     Record the file and path information to the saved image?:Yes
     Create subfolders in the output folder?:Yes
-    Base image folder:Elsewhere...|/Users/theresaswayne/Desktop/Mikko Turunen
+    Base image folder:Elsewhere...|/Users/confocal/Desktop/2024-04 Mikko Turunen
     How to save the series:T (Time)
     Save with lossless compression?:Yes
