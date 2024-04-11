@@ -1,0 +1,49 @@
+[   1] [Images]
+  Drag and drop input files or folders here and click Apply filters to the file list
+  Suggest dragging files not folders
+
+[   2] [Metadata]
+  This step captures the experiment name and well number from each image.
+  ***On each run, click Update to verify that the experiment and well # are identified correctly.***
+
+[   3] [NamesAndTypes]
+  This step organizes the different channel images from each field.
+  ***On each run, click Update to verify the images are identified correctly.***
+
+[   4] [Groups]
+  This pipeline has no groups.
+
+[   5] [IdentifyPrimaryObjects]
+  Identify nuclei from the DAPI channel.
+
+[   6] [IdentifySecondaryObjects]
+  Identify cells using phalloidin (red) channel
+
+[   7] [IdentifyTertiaryObjects]
+  Identify cytoplasm by subtracting the nucleus from the cell
+
+[   8] [ExpandOrShrinkObjects]
+  Create a nuclear ring, step 1: Shrink the detected nuclei
+
+[   9] [ExpandOrShrinkObjects]
+  Create a nuclear ring, step 2: Expand the detected nuclei
+
+[  10] [IdentifyTertiaryObjects]
+  Create a nuclear ring, step 3: Subtract the shrunken area from the original area
+
+[  11] [MeasureObjectIntensity]
+  Measure intensity of target (green) channel in each object type
+
+[  12] [ExportToSpreadsheet]
+  Export results
+
+[  13] [GrayToColor]
+  Create an overlay image on the green channel, without rescaling the intensity
+
+[  14] [OverlayOutlines]
+  Overlay the cell and nuclei outlines on the overlay image
+
+[  15] [SaveImages]
+  Save the overlay image for evaluating the detection of cells
+  *** The base image folder at the bottom should be the folder containing the INPUT images!
+  It will be used to reproduce the folder structure in the output folder.
