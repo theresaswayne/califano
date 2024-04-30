@@ -53,4 +53,6 @@ p_mean <- ggplot(objectData,
                geom="pointrange", color="red")
 
 outputPlot = paste(objectName, "mean plot.pdf")
-ggsave(file.path(parentDir, outputPlot), width=10, height = 7)
+
+# plot size can be changed according to the number of panels
+ggsave(file.path(parentDir, outputPlot), width=20, height = 14)
